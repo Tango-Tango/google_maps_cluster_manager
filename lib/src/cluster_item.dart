@@ -5,7 +5,7 @@ import 'package:google_maps_flutter_platform_interface/google_maps_flutter_platf
 mixin ClusterItem {
   LatLng get location;
 
-  late final String? _geohash;
+  String? _geohash;
   String get geohash => _geohash ??=
       Geohash.encode(location, codeLength: ClusterManager.precision);
 }
